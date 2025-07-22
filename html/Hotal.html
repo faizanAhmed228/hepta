@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hepta-Free Website Template</title>
+  <link rel="stylesheet" href="/css/hotal.css"
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+   <div id="one">
+    <header><div id="four"><a id="seven" href="/index.htm">Hepta</a>
+        <div id="menuIcon" class="menu-icon" onclick="openMenu()">&#9776;</div>
+        <div id="fullscreenMenu" class="overlay">
+        <a  id="closeIcon" class="close-btn" onclick="closeMenu()">&times;</a>
+        <div class="overlay-content">
+            <a href="/index.htm" style="color: #65c0ba;"><b>Home</b></a>
+            <a href="/html/Hotal.html"><b>Hotels</b></a>
+            <a href="/html/About us.html"><b>About Us</b></a>
+            <a href="/html/Gallery.html"><b>Gallery</b></a>
+            <a href="/html/news.html"><b>News</b></a>
+            <a href="/html/contact.html"><b>Contact</b></a>
+        </div>
+        </div>
+    
+        <script>
+            function openMenu(){
+                document.getElementById("fullscreenMenu").style.width="100%";
+                document.getElementById("menuIcon").style.display="none";
+                document.getElementById("closeIcon").style.display="block"
+            }
+            function closeMenu(){
+                document.getElementById("fullscreenMenu").style.width="0%";
+                document.getElementById("menuIcon").style.display="block";
+                document.getElementById("closeIcon").style.display="none";
+            }
+        </script>
+    <br><br><br><br>
+    </header>
+    <main>
+     <h1 id="two"><b>Our Hotel</b></h1>
+     <div id="move">
+     <p class="five"><b>A free template by</b></p>
+     <a href="#" target="_blank" class="my-link">Colorlib.</a>
+     <p class="five"><b> Download and share!</b></p>
+     </div>
+     <br>   
+</div>
+    <br><br><br><br><br>
+    <div class="sixteen">
+    <img src="/picture/logo1.jpg"alt="Good Foods Pic"class="center-img" >
+    <h3 class="headings"><b>Good Foods</b></h3>
+    <pre class="text">Far far away, behind the word 
+        mountains, far from the countries 
+        Vokalia and Consonantia, there live the 
+        blind texts.</pre>
+    </div>
+    <div class="sixteen">
+    <img src="/picture/logo2.jpg"alt="Travel Anywhere Pic"class="center-img" >
+    <h3 class="headings"><b>Travel Anywhere</b></h3>
+    <pre class="text">Far far away, behind the word 
+        mountains, far from the countries 
+        Vokalia and Consonantia, there live the 
+        blind texts.</pre></div>
+    <div class="sixteen">
+    <img src="/picture/logo3.jpg"alt="Airplane Pic" class="center-img" >
+    <h3 class="headings"><b>Airplane</b></h3>
+    <pre class="text">Far far away, behind the word 
+        mountains, far from the countries 
+        Vokalia and Consonantia, there live the 
+        blind texts.</pre></div>
+    <div class="sixteen">
+    <img src="/picture/logo4.jpg" alt="Beach resort Image" class="center-img">
+    <h3 class="headings"><b>Beach Resort</b></h3>
+    <pre class="text">Far far away, behind the word 
+        mountains, far from the countries 
+        Vokalia and Consonantia, there live the 
+        blind texts.</pre></div>
+    <div class="sixteen">
+    <img src="/picture/logo5.jpg" alt="Montain Climbing Pic"class="center-img">
+    <h3 class="headings"><b>Mountain Climbing</b></h3>
+    <pre class="text">Far far away, behind the word 
+        mountains, far from the countries 
+        Vokalia and Consonantia, there live the 
+        blind texts.</pre></div>
+    <div class="sixteen">
+    <img src="/picture/logo6.jpg"alt="Hot air balloon Pic"class="center-img">
+    <h3 class="headings"><b>Hot Air Balloon</b></h3>
+    <pre class="text">Far far away, behind the word 
+        mountains, far from the countries 
+        Vokalia and Consonantia, there live the 
+        blind texts.</pre></div>
+        <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const sixteenBlocks = document.querySelectorAll('.sixteen');
+
+    const sixteenObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                // Optional: unobserve after showing
+                sixteenObserver.unobserve(entry.target);
+            }
+        });
+    });
+
+    sixteenBlocks.forEach(block => {
+        sixteenObserver.observe(block);
+    });
+});
+</script>
+
+        <br><br>
+        <div class="mainContainer">
+    <img  id="eight" src="/picture/hero_1.jpg.webp"alt=Image >
+    <div id="nine">
+    <h1 id="eleven"><b>Family Room</b></h1>
+    <pre id="ten">    Far far away, behind the world mountains, far from 
+    the countries Vokalia and Consonantia, there live the blind 
+    texts.Seprated they live in Bookmarksgrove right at 
+    the coast of the Semantics, a large language ocean.
+    
+    A small river named Duden flows by their place and 
+    supplies it with the necessary regelialia.</pre>
+    <div id="buttonadjust">
+    <button  id="twelve" onclick="reloadFromTop()">LEARN MORE</button>
+</div>
+    <script>
+        function reloadFromTop() {
+            // Reloads the page and scrolls to top
+            window.location.href = window.location.pathname;
+        }
+    </script>
+    </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const sectionNine = document.getElementById('nine');
+
+        const observerFromLeft = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    sectionNine.classList.add('show');
+                }
+            });
+        });
+
+        observerFromLeft.observe(sectionNine);
+    });
+</script>
+
+    </div>
+    <div class="mainContainer1">
+    <div id="nine1">
+    <h1 id="eleven"><b>Presidential Room</b></h1>
+    <pre id="ten">    Far far away, behind the world mountains, far from 
+    the countries Vokalia and Consonantia, there live the blind 
+    texts.Seprated they live in Bookmarksgrove right at 
+    the coast of the Semantics, a large language ocean.
+    
+    A small river named Duden flows by their place and 
+    supplies it with the necessary regelialia.</pre>
+    <div id="buttonadjust">
+    <button  id="twelve" onclick="reloadFromTop()">LEARN MORE</button>
+</div>
+    <script>
+        function reloadFromTop() {
+            // Reloads the page and scrolls to top
+            window.location.href = window.location.pathname;
+        }
+    </script>
+    </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const sectionNine1 = document.getElementById('nine1');
+
+        const observerFromRight = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    sectionNine1.classList.add('show');
+                }
+            });
+        });
+
+        observerFromRight.observe(sectionNine1);
+    });
+</script>
+
+    <img  id="eight1" src="/picture/hero_2.jpg.webp"alt=Image >
+    </div>
+      <br><br><br><br><br><br>
+      <div id="scrollgg">
+    <h1 id="seventeen"><b>Hot Gallery</b></h1> 
+    <pre id="eighteen">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In dolor, iusto doloremque quo 
+    odio repudiandae sunt eveniet? Enim facilis laborum voluptate id porro, culpa maiores 
+    quis, blanditiis laboriosam alias. Sed.</pre>
+    <br><br>
+<div id="twentynine">  
+        <div class="carousel-wrapper">
+    
+          <button class="carousel-btn prev">&#10094;</button>
+
+    <div class="carousel-container">
+
+      <div class="carousel">
+        <div class="carousel-track">
+          <img src="/picture/photopull.jpg" class="carousel-slide active" alt="Image 1">
+          <img src="/picture/hero_1.jpg.webp" class="carousel-slide" alt="Image 2">
+          <img src="/picture/hero_2.jpg.webp" class="carousel-slide" alt="Image 3">
+          <img src="/picture/cliam.jpg" class="carousel-slide" alt="Image 4">
+          <img src="/picture/photogiral.jpg" class="carousel-slide" alt="Image 5">
+          <img src="/picture/photoglass.jpg" class="carousel-slide" alt="Image 6">
+          <img src="/picture/photoboy.jpg" class="carousel-slide" alt="Image 7">
+        </div>
+      </div>
+
+        <div class="carousel-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+
+    <button class="carousel-btn next">&#10095;</button>
+  </div>
+<br><br><br><br><br>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+  const slides = document.querySelectorAll(".carousel-slide");
+  const nextBtn = document.querySelector(".next");
+  const prevBtn = document.querySelector(".prev");
+  const dots = document.querySelectorAll(".dot");
+
+  let currentIndex = 0;
+  let autoScroll;
+
+  function updateCarousel(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
+    });
+
+    dots.forEach(dot => dot.classList.remove("active"));
+    if (dots[index]) dots[index].classList.add("active");
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel(currentIndex);
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateCarousel(currentIndex);
+  }
+
+  function startAutoScroll() {
+    autoScroll = setInterval(nextSlide, 4000);
+  }
+
+  function stopAutoScroll() {
+    clearInterval(autoScroll);
+  }
+
+  nextBtn.addEventListener("click", () => {
+    stopAutoScroll();
+    nextSlide();
+    startAutoScroll();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    stopAutoScroll();
+    prevSlide();
+    startAutoScroll();
+  });
+
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      stopAutoScroll();
+      currentIndex = index;
+      updateCarousel(index);
+      startAutoScroll();
+    });
+  });
+
+  updateCarousel(currentIndex);
+  startAutoScroll();
+});
+
+</script>
+
+    <br><br><br><br><br>
+    <h1 id="seventeen"><b>More Hotel Features</b></h1>
+    <pre id="twentyfive">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In dolor, iusto doloremque quo 
+    odio repudiandae sunt eveniet? Enim facilis laborum voluptate id porro, culpa maiores 
+    quis, blanditiis laboriosam alias. Sed.</pre>
+    <br><br>
+    <div class="ratingsadjust">
+    <a  href="#"><img src="/picture/photoglass.jpg" alt="ratings" height="195"></a>
+    <br>
+    <a class="headingadjust" href="#"><br><b>Five Reasons to<br>Stay at Villa Resort</b></a>
+    </div>
+    <div class="ratingsadjust">
+    <a  href="#"><img src="/picture/photoboy.jpg" alt="ratings" height="195"></a>
+    <br>
+    <a class="headingadjust" href="#"><br><b>Five Reasons to<br>Stay at Villa Resort</b></a>
+    </div>
+    <div class="ratingsadjust">
+    <a  href="#"><img src="/picture/sofa.jpg" alt="ratings" height="195"></a>
+    <br>
+    <a class="headingadjust" href="#"><br><b>Five Reasons to<br>Stay at Villa Resort</b></a>
+    </div>
+    </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const scrollggSection = document.getElementById('scrollgg');
+
+        const scrollggObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    scrollggSection.classList.add('show');
+                    scrollggObserver.unobserve(scrollggSection); // optional: stops observing after first reveal
+                }
+            });
+        });
+
+        scrollggObserver.observe(scrollggSection);
+    });
+</script>
+    
+</main>
+
+<footer>
+    <div id="footer-container">
+        <div class="footer-column">
+            <h3 class="footer-heading">Quick Link</h3>
+            <a href="#">About Us</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Help</a>
+            <a href="#">Rooms</a>
+        </div>
+
+        <div class="footer-column">
+            <h3 class="footer-heading">Support</h3>
+            <a href="#">Our Location</a>
+            <a href="#">The Hosts</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Restaurant</a>
+        </div>
+
+        <div class="footer-column">
+            <h3 class="footer-heading">Contact Info</h3>
+            <p><span class="subhead">Address:</span> 98 West 21th Street, Suite 721 
+              New York NY 10016</p>
+              <br>
+            <p><span class="subhead">Phone:</span> (+1) 435 3533</p>
+            <br>
+            <p><span class="subhead">Email:</span> info@yourdomain.com</p>
+        </div>
+
+        <div class="footer-column">
+            <h3 class="footer-heading">Subscribe</h3>
+            <p>Sign up for our newsletter</p>
+            <div class="subscribe-box">
+                <input type="email" placeholder="Your email..." />
+                <button>&#10148;</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>Copyright © 2025 All rights reserved | This template is made with <span style="color: red;">❤</span> by Colorlib</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hepta-Free Website Template</title>
+
+    <link rel="stylesheet" href="/css/Gallery.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+    <section>
+    <div id="one">
+    <header><div id="four"><a id="seven" href="/index.htm">Hepta</a>
+        <div id="menuIcon" class="menu-icon" onclick="openMenu()">&#9776;</div>
+        <div id="fullscreenMenu" class="overlay">
+        
+        <div class="overlay-content">
+            <a href="/index.htm" style="color: #2c3a39;">Home</a>
+            <a href="/html/Hotal.html">Hotels</a>
+            <a href="/html/About us.html">About Us</a>
+            <a href="/html/Gallery.html">Gallery</a>
+            <a href="/html/news.html">News</a>
+            <a href="/html/contact.html">Contact</a>
+        </div>
+        <a  id="closeIcon" class="close-btn" onclick="closeMenu()">&times;</a>
+        </div>
+        <script>
+            function openMenu(){
+                document.getElementById("fullscreenMenu").style.width="100%";
+                document.getElementById("menuIcon").style.display="none";
+                document.getElementById("closeIcon").style.display="block"
+            }
+            function closeMenu(){
+                document.getElementById("fullscreenMenu").style.width="0%";
+                document.getElementById("menuIcon").style.display="block";
+                document.getElementById("closeIcon").style.display="none";
+            }
+        </script>
+    <br><br><br><br>
+    </header>
+    <main>
+      <div class="col">
+    <h1>Gallery</h1> 
+     <p>A  free template by<a id="color" href="/html/Gallery.html">colorlib.</a>  Download and 
+              share</p>
+     
+     </div>   
+ </div>
+   </section>
+   <section class="Gallery1">
+    <div class="gallery">
+    <img src="/picture/photoglass.jpg" alt="Gallery Image">
+    <img src="/picture/photoboy.jpg" alt="Gallery Image">
+    <img src="/picture/sofa.jpg" alt="Gallery Image">
+    <img src="/picture/cliam.jpg" alt="Gallery Image">
+    <img src="/picture/sofa.jpg" alt="Gallery Image">
+    <img src="/picture/cliam.jpg" alt="Gallery Image">
+    <img src="/picture/photoglass.jpg" alt="Gallery Image">
+    <img src="/picture/photoboy.jpg" alt="Gallery Image">
+        <div class="solve">
+     <img src="/picture/photoglass.jpg" alt="Gallery Image">
+     <img src="/picture/photoboy.jpg" alt="Gallery Image">
+   </div>
+   </section>
+    <div class="gallery2">
+    <img src="/picture/photoglass.jpg" alt="Gallery Image">
+    <img src="/picture/photoboy.jpg" alt="Gallery Image">
+    <img src="/picture/sofa.jpg" alt="Gallery Image">
+    <img src="/picture/cliam.jpg" alt="Gallery Image">
+</div>
+</div>
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+</div>
+<script>
+  const images = document.querySelectorAll('.gallery img, .gallery2 img, .solve img');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.lightbox .close');
+
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'block';
+      lightboxImg.src = img.src;
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.style.display = 'none';
+    }
+  });
+</script>
+
+</section>
+   
+   <footer>
+    <div id="footer-container">
+        <div class="footer-column">
+            <h3 class="footer-heading">Quick Link</h3>
+            <a href="#">About Us</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Help</a>
+            <a href="#">Rooms</a>
+        </div>
+
+        <div class="footer-column">
+            <h3 class="footer-heading">Support</h3>
+            <a href="#">Our Location</a>
+            <a href="#">The Hosts</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Restaurant</a>
+        </div>
+
+        <div class="footer-column">
+            <h3 class="footer-heading">Contact Info</h3>
+            <p><span class="subhead">Address:</span> 98 West 21th Street, Suite 721 
+            New York NY 10016</p>
+            <br>
+            <p><span class="subhead">Phone:</span> (+1) 435 3533</p>
+            <br>
+            <p><span class="subhead">Email:</span> info@yourdomain.com</p>
+        </div>
+
+        <div class="footer-column">
+            <h3 class="footer-heading">Subscribe</h3>
+            <p>Sign up for our newsletter</p>
+            <div class="subscribe-box">
+                <input type="email" placeholder="Your email..." />
+                <button>&#10148;</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>Copyright © 2025 All rights reserved | This template is made with <span style="color: red;">❤</span> by Colorlib</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</footer>
+</body>y
+</html>
