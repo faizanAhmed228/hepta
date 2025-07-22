@@ -1,3 +1,7 @@
+*{
+  margin: 0;
+  padding: 0;
+}
 #one{
     background:linear-gradient(#00000033,#00000033), url(/picture/hero_1.jpg.webp);
     height: 700px;
@@ -189,6 +193,7 @@
 .sixteen{
     display: inline-block;
     text-align: center;
+    padding-left: 3rem;
 }
 .menu-icon{
     font-size: 30px;
