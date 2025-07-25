@@ -1,11 +1,14 @@
-#one{
-    background-image:linear-gradient(#00000033,#00000033),url(/picture/hero_2.jpg.webp);
+
+#one {
+    background-image: linear-gradient(#00000033, #00000033), url(/picture/hero_2.jpg.webp);
     height: 1014px;
     width: 100%;
     background-repeat: no-repeat;
-
-
+    background-size: cover; /* make background fully responsive */
+    background-position: center;
+    position: relative; /* required for .col absolute positioning */
 }
+
 .col {
     width: 90%;
     color: #ffffff;
@@ -14,15 +17,14 @@
     left: 50%;
     transform: translate(-50%, -50%) translateY(50px); /* starts lower */
     text-align: center;
-
     opacity: 0; /* starts hidden */
-    animation: slideUp 1s ease-out forwards; /* run animation */
+    animation: slideUp 1s ease-out forwards;
 }
 
 @keyframes slideUp {
     to {
         opacity: 1;
-        transform: translate(-50%, -50%) translateY(0); /* moves to center */
+        transform: translate(-50%, -50%) translateY(0);
     }
 }
 
@@ -39,7 +41,6 @@
     color: #fff;
 }
 
-
 #color {
     color: gray;
     text-decoration: none;
@@ -48,10 +49,40 @@
 }
 
 #color:hover {
-    color: #fff; /* hover color */
+    color: #fff;
     text-decoration: underline;
-
 }
+
+/* Tablet view */
+@media (max-width: 1024px) {
+    .col h1 {
+        font-size: 50px;
+    }
+    .col p {
+        font-size: 22px;
+    }
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    #one {
+        height: 700px; /* reduce height for mobile */
+    }
+    .col {
+        width: 95%;
+        top: 40%; /* move higher */
+        transform: translate(-50%, -40%); /* adjust centering */
+        padding: 0 10px;
+    }
+    .col h1 {
+        font-size: 28px;
+        line-height: 1.2;
+    }
+    .col p {
+        font-size: 16px;
+    }
+}
+
 
 
 #three{
@@ -261,25 +292,27 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
 .gallery img:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
 .solve {
     display: flex;
-    height: 150;
-width: 200%;
-gap: 10%;
+    height: 150px; /* added px */
+    width: 200%;
+    gap: 10%;
 }
-.gallery2{
-     display: grid;
+
+.gallery2 {
+    display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 15px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
+
 .gallery2 img {
     width: 100%;
     height: auto;
@@ -288,11 +321,41 @@ gap: 10%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
 .gallery2 img:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
+/* Tablet view (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    .gallery, .gallery2 {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        padding: 15px;
+    }
+    .solve {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 5%;
+    }
+}
+
+/* Mobile view (<768px) */
+@media screen and (max-width: 768px) {
+    .gallery, .gallery2 {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        padding: 10px;
+    }
+    .solve {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 5%;
+    }
+}
+
 .lightbox {
   display: none;
   position: fixed;
@@ -597,7 +660,6 @@ footer {
     color: #ccc;
     font-family: Arial, sans-serif;
     padding: 40px 0 20px 0;
-    margin-top: 15%;
 }
 
 #footer-container {
@@ -687,3 +749,71 @@ footer {
 .social-icons a:hover {
     color: #fff;
 }
+/* Tablets (portrait & landscape) */
+@media (max-width: 1024px) {
+    #footer-container {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        flex: 1 1 45%;
+        min-width: 200px;
+    }
+
+    .subscribe-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .subscribe-box button {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 600px) {
+    footer {
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    #footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .footer-column {
+        flex: 1 1 100%;
+        min-width: unset;
+    }
+
+    .footer-heading {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .footer-column a {
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+
+    .subscribe-box {
+        flex-direction: column;
+        align-items: center;
+        border-bottom: none;
+    }
+
+    .subscribe-box input {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .subscribe-box button {
+        width: 100%;
+    }

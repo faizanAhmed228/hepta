@@ -23,12 +23,12 @@
         <div id="fullscreenMenu" class="overlay">
         <a  id="closeIcon" class="close-btn" onclick="closeMenu()">&times;</a>
         <div class="overlay-content">
-            <a href="/index.htm" style="color: #65c0ba;"><b>Home</b></a>
+            <a href="/index.htm" ><b>Home</b></a>
             <a href="/html/hotalroom.jpg"><b>Hotels</b></a>
             <a href="/html/About us.html"><b>About Us</b></a>
             <a href="/html/Gallery.html"><b>Gallery</b></a>
             <a href="/html/news.html"><b>News</b></a>
-            <a href="/html/contact.html"><b>Contact</b></a>
+            <a href="/html/contact.html"style="color: #65c0ba;"><b>Contact</b></a>
         </div>
         </div>
         <script>
@@ -45,6 +45,7 @@
         </script>
     <br><br><br><br>
     </header>
+    <section>
     <main>
      <h1 id="two"><b>Contact</b></h1>
      <div id="move">
@@ -96,30 +97,48 @@
     language ocean."<br>
     _Clare Gupta</pre>
     </div>
+    
     <div class="twentythree">
     <img src="/picture/dp2.jpg" alt="Customer dp" height="100">
     <pre  class="Customertext">   "Far far away, behind the word 
     mountains, far from the countries 
-    Vokalia and Consonantia, there live 
-    the blind texts.Seprated they live 
-    in Bookmarksgrove right at the 
-    coast of the Semantics, a large 
-    language ocean."<br>
+    Vokalia and Consonantia,there 
+    live the blind texts.Seprated 
+    they live  in Bookmarks groverigh
+     at the coast of the Semantics, 
+     a large language ocean."<br>
     — Rogie Slater</pre>
     </div>
     <div class="twentythree">
     <img src="/picture/dp3.jpg" alt="Customer dp" height="100">
     <pre  class="Customertext">   "Far far away, behind the word 
     mountains, far from the countries 
-    Vokalia and Consonantia, there live 
+    Vokalia and Consonantia,there live 
     the blind texts.Seprated they live 
     in Bookmarksgrove right at the 
-    coast of the Semantics, a large 
+    coast of the Semantics,a large 
     language ocean."<br>
     — John Doe</pre>
-    </div>
+   
+    
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".animate-up");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.2 });
+  elements.forEach(el => observer.observe(el));
+});
+</script>
+
+ </div>
     </div>
 </main>
+</section>
 <br><br>
 <footer>
     <div id="footer-container">

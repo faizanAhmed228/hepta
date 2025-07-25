@@ -9,21 +9,20 @@
 
 </head>
 <body>
-    <section>
-    <div id="one">
-    <header><div id="four"><a id="seven" href="/index.htm">Hepta</a>
+  
+   <div id="one">
+    <header><div id="four"><a id="seven" href="/index.htm"><b>Hepta</b></a>
         <div id="menuIcon" class="menu-icon" onclick="openMenu()">&#9776;</div>
         <div id="fullscreenMenu" class="overlay">
-        
-        <div class="overlay-content">
-            <a href="/index.htm" style="color: #2c3a39;">Home</a>
-            <a href="/html/Hotal.html">Hotels</a>
-            <a href="/html/About us.html">About Us</a>
-            <a href="/html/Gallery.html">Gallery</a>
-            <a href="/html/news.html">News</a>
-            <a href="/html/contact.html">Contact</a>
-        </div>
         <a  id="closeIcon" class="close-btn" onclick="closeMenu()">&times;</a>
+        <div class="overlay-content">
+             <a href="/index.htm"><b>Home</b></a>
+            <a href="/html/Hotal.html"><b>Hotels</b></a>
+            <a href="/html/About us.html" style="color: #65c0ba;"><b>About Us</b></a>
+            <a href="/html/Gallery.html"><b>Gallery</b></a>
+            <a href="/html/news.html"><b>News</b></a>
+            <a href="/html/contact.html"><b>Contact</b></a>
+        </div>
         </div>
         <script>
             function openMenu(){
@@ -40,59 +39,104 @@
     <br><br><br><br>
     </header>
     <main>
-      <div class="col">
-    <h1>About Us </h1> 
-     <p>A  free template by<a id="color" href="/html/About us.html">colorlib.</a>  Download and 
-              share</p>
-     
-     </div>   
- </div>
-   </section>
+    <div id="khan">
+     <h1 id="two"><b>About Us</b></h1>
+     <div id="move">
+     <p class="five"><b>A free template by</b></p>
+     <a href="#" target="_blank" class="my-link">Colorlib.</a>
+     <p class="five"><b> Download and share!</b></p>
+     </div>
+     </div>
+    
+     </div>
+     <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const khan = document.getElementById("khan");
 
- <section>
-  <div class="mainContainer">
-    <img id="eight" src="/picture/about back_1.jpg.webp" alt="Image">
-    <div id="nine" class="slide-right">
-      <h1 id="eleven" class="slide-right delay1">Welcome Travels & Tours</h1>
-      <p id="ten" class="slide-right delay2">
-        Far far away, behind the world mountains, far from the countries 
-        Vokalia and Consonantia, there live the blind texts. Separated they live
-        in Bookmarksgrove right at the coast of the Semantics, a large
-        language ocean.
-      </p>
-      <a class="hero-btn slide-right delay3" href="">Learn More</a>
+    function animateKhan() {
+      const rect = khan.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (rect.top <= windowHeight - 100) {
+        khan.classList.add("animate-up");
+        window.removeEventListener("scroll", animateKhan); // Only trigger once
+      }
+    }
+
+    window.addEventListener("scroll", animateKhan);
+    animateKhan(); // In case already in view
+  });
+</script>
+
+     <br>   
+</div>
+  
+    <br><br><br><br><br><br><br>
+   <div class="mainContainer">
+    <img  id="eight" src="/picture/about back_1.jpg.webp"alt=Image >
+    <div id="nine">
+    <h1 id="eleven"><b>Welcome Travel<br>& Tours</b></h1>
+<p id="ten">
+    Far far away, behind the world mountains, far from
+    the countries Vokalia and Consonantia, there live the blind
+    texts. Separated they live in Bookmarksgrove right at
+    the coast of the Semantics, a large language ocean.<br>
+    A small river named Duden flows by their place and
+    supplies it with the necessary regelialia.
+</p>
+    <div id="buttonadjust">
+    <button  id="twelve" onclick="reloadFromTop()">LEARN MORE</button>
+</div>
+    <script>
+        function reloadFromTop() {
+            // Reloads the page and scrolls to top
+            window.location.href = window.location.pathname;
+        }
+    </script>
     </div>
-  </div>
-  <hr>
-</section>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const sectionNine = document.getElementById('nine');
 
-<br><br><br>
-<section class="slider section">
-  <div class="name">
-    <h1 class="slide-up">Hotel Gallery.</h1>
-    <p id="n1" class="slide-up delay">
-      Far far away, behind the word mountains, far from the countries 
-      Vokalia and Consonantia, there live the blind texts. Separated they 
-      live in Bookmarksgrove right at the coast of the Semantics, a large
-      language ocean.
-    </p>
-  </div>
+        const observerFromLeft = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    sectionNine.classList.add('show');
+                }
+            });
+        });
 
-  <div class="carousel-wrapper fade-up delay2">
-    <button class="carousel-btn prev">&#10094;</button>
+        observerFromLeft.observe(sectionNine);
+    });
+</script>
+
+    </div>
+    <div id="scrollg">
+      <br><br><br><br><br><br>
+    <h1 id="seventeen"><b>Hotel Gallery</b></h1> 
+    <pre id="eighteen">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
+    there live the blind texts. Separated they live in Bookmarksgrove right at the coast of 
+    the Semantics, a large language ocean.</pre>
+    <br><br>
+      <div class="carousel-wrapper">
+    
+          <button class="carousel-btn prev">&#10094;</button>
+
     <div class="carousel-container">
+
       <div class="carousel">
         <div class="carousel-track">
-          <img src="/picture/hero_1.jpg.webp" class="carousel-slide active" alt="Image 1">
+           <img src="/picture/hero_1.jpg.webp" class="carousel-slide active" alt="Image 1">
           <img src="/picture/sofa.jpg" class="carousel-slide" alt="Image 2">
           <img src="/picture/photo.jpg" class="carousel-slide" alt="Image 3">
-          <img src="/picture/photoboy.jpg" class="carousel-slide" alt="Image 4">
-          <img src="/picture/photoglass.jpg" class="carousel-slide" alt="Image 6">
-          <img src="/picture/photogiral.jpg" class="carousel-slide" alt="Image 7">
-          <img src="/picture/photopull.jpg" class="carousel-slide" alt="Image 8">
+          <img src="/picture/photoboy.jpg"  class="carousel-slide" alt="Image 4">
+          <img src="/picture/photoglass.jpg"class="carousel-slide" alt="Image 5">
+          <img src="/picture/photogiral.jpg" class="carousel-slide" alt="Image 6">
+          <img src="/picture/photopull.jpg" class="carousel-slide" alt="Image 7">
         </div>
       </div>
-      <div class="carousel-dots">
+
+        <div class="carousel-dots">
         <span class="dot active"></span>
         <span class="dot"></span>
         <span class="dot"></span>
@@ -103,127 +147,11 @@
         <span class="dot"></span>
       </div>
     </div>
+
     <button class="carousel-btn next">&#10095;</button>
   </div>
-</section>
-
-
-   <br><br><br>
-<section class="BlogPost">
-  <div class="four">
-    <h1 class="slide-up">Team</h1>
-    <p id="b1" class="slide-up delay">
-      Far far away, behind the word mountains, far from the countries
-      Vokalia and Consonantia, there live the blind texts. Separated they 
-      live in Bookmarksgrove right at the coast of the Semantics, a large
-      language ocean.
-    </p>
-  </div>
-
-  <div class="card-wrapper">
-    <div class="card fade-up delay1">
-      <img src="/picture/dp_3.jpg.webp" alt="team">
-      <div class="card-text">
-        <p class="date">CEO, CO-FOUNDER</p>
-        <a id="dp1" href="/html/About us.html"><h1>Vince Richardson</h1></a>
-      </div>
-    </div>
-
-    <div class="card fade-up delay2">
-      <img src="/picture/dp_1.jpg.webp" alt="team">
-      <div class="card-text">
-        <p class="date">CTO, CO-FOUNDER</p>
-        <a id="dp1" href="/html/About us.html"><h1>Jean Love</h1></a>
-      </div>
-    </div>
-
-    <div class="card fade-up delay3">
-      <img src="/picture/dp_2.jpg.webp" alt="Couch Interior">
-      <div class="card-text">
-        <p class="date">MARKETER, CO-FOUNDER</p>
-        <a id="dp1" href="/html/About us.html"><h1>Jeff Stark</h1></a>
-      </div>
-    </div>
-
-    <div class="card fade-up delay4">
-      <img src="/picture/dp_3.jpg.webp" alt="team">
-      <div class="card-text">
-        <p class="date">CEO, CO-FOUNDER</p>
-        <a id="dp1" href="/html/About us.html"><h1>Vince Richardson</h1></a>
-      </div>
-    </div>
-
-    <div class="card fade-up delay5">
-      <img src="/picture/dp_1.jpg.webp" alt="team">
-      <div class="card-text">
-        <p class="date">CTO, CO-FOUNDER</p>
-        <a id="dp1" href="/About us.html"><h1>Jean Love</h1></a>
-      </div>
-    </div>
-
-    <div class="card fade-up delay6">
-      <img src="/picture/dp_2.jpg.webp" alt="Couch Interior">
-      <div class="card-text">
-        <p class="date">MARKETER, CO-FOUNDER</p>
-        <a id="dp1" href="/html/About us.html"><h1>Jeff Stark</h1></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-    
-<footer>
-    <div id="footer-container">
-        <div class="footer-column">
-            <h3 class="footer-heading">Quick Link</h3>
-            <a href="#">About Us</a>
-            <a href="#">Terms & Conditions</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Help</a>
-            <a href="#">Rooms</a>
-        </div>
-
-        <div class="footer-column">
-            <h3 class="footer-heading">Support</h3>
-            <a href="#">Our Location</a>
-            <a href="#">The Hosts</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-            <a href="#">Restaurant</a>
-        </div>
-
-        <div class="footer-column">
-            <h3 class="footer-heading">Contact Info</h3>
-            <p><span class="subhead">Address:</span> 98 West 21th Street, Suite 721 
-              New York NY 10016</p>
-              <br>
-            <p><span class="subhead">Phone:</span> (+1) 435 3533</p>
-            <br>
-            <p><span class="subhead">Email:</span> info@yourdomain.com</p>
-        </div>
-
-        <div class="footer-column">
-            <h3 class="footer-heading">Subscribe</h3>
-            <p>Sign up for our newsletter</p>
-            <div class="subscribe-box">
-                <input type="email" placeholder="Your email..." />
-                <button>&#10148;</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>Copyright © 2025 All rights reserved | This template is made with <span style="color: red;">❤</span> by Colorlib</p>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-        </div>
-    </div>
-</footer>
-<script>
+<br><br><br><br><br>
+  <script>
     document.addEventListener("DOMContentLoaded", function () {
   const slides = document.querySelectorAll(".carousel-slide");
   const nextBtn = document.querySelector(".next");
@@ -286,6 +214,133 @@
 });
 
 </script>
+    <br><br><br><br><br>
+    <h2 id="seventeen"><b>Team</b></h2>
+    <p id="twentyfive">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
+    there live the blind texts. Separated they live in Bookmarksgrove right at the coast of 
+    the Semantics, a large language ocean.</p>
+    <div class="team-wrapper">
+    <div class="ratingsadjust">
+    <a  href="#"><img src="/picture/dp_3.jpg.webp" alt="ratings" height="290"></a>
+    <br>
+    <span class="personadjust">CEO, CO-FOUNDER</span>
+    <a class="headingadjust" href="#"><b>Vince Richardson</b></a>
+    </div>
+    <div class="ratingsadjust">
+    <a  href="#"><img src="/picture/dp_1.jpg.webp"  alt="ratings" height="290"></a>
+    <br>
+    <span class="personadjust">CTO, CO-FOUNDER</span>
+    <a class="headingadjust" href="#"><b>Jean Love</b></a>
+    </div>
+    <div class="ratingsadjust">
+    <a  href="#"><img src= "/picture/dp_2.jpg.webp" alt="ratings" height="290"></a>
+    <br>
+    <span class="personadjust">MARKETER, CO-FOUNDER</span>
+    <a class="headingadjust" href="#"><b>Jeff Stark</b></a>
+    </div>
+    <div class="ratingsadjust">
+    <a  href="#"><img src="/picture/dp_3.jpg.webp"  alt="ratings" height="290"></a>
+    <br>
+    <span class="personadjust">CEO, CO-FOUNDER</span>
+    <a class="headingadjust" href="#"><b>Vince Richardson</b></a>
+    </div>
+    <div class="ratingsadjust">
+    <a  href="#"><img src="/picture/dp_1.jpg.webp" alt="ratings" height="290"></a>
+    <br>
+    <span class="personadjust">CTO, CO-FOUNDER</span>
+    <a class="headingadjust" href="#"><b>Jean Love</b></a>
+    </div>
+    <div class="ratingsadjust">
+    <a  href="#"><img src="/picture/dp_2.jpg.webp"  alt="ratings" height="290"></a>
+    <br>
+    <span class="personadjust">MARKETER, CO-FOUNDER</span>
+    <a class="headingadjust" href="#"><b>Jeff Stark</b></a>
+    </div>
+    </div>
+    </div>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollg = document.getElementById("scrollg");
 
+    function handleScrollAnimation() {
+      const rect = scrollg.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (rect.top <= windowHeight - 100) {
+        scrollg.classList.add("animate-up");
+        window.removeEventListener("scroll", handleScrollAnimation); // Run only once
+      }
+    }
+
+    window.addEventListener("scroll", handleScrollAnimation);
+    handleScrollAnimation(); // Trigger in case already in view
+  });
+</script>
+
+    </main>
+     <footer>
+    <div id="footer-container">
+        <div class="footer-column">
+            <h3 class="footer-heading">Quick Link</h3>
+            <a href="#">About Us</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Help</a>
+            <a href="#">Rooms</a>
+        </div>
+
+        <div class="footer-column">
+            <h3 class="footer-heading">Support</h3>
+            <a href="#">Our Location</a>
+            <a href="#">The Hosts</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Restaurant</a>
+        </div>
+
+        <div class="footer-column">
+            <h3 class="footer-heading">Contact Info</h3>
+            <p><span class="subhead">Address:</span> 98 West 21th Street, Suite 721 New York NY 10016</p>
+            <br>
+            <p><span class="subhead">Phone:</span> (+1) 435 3533</p>
+            <br>
+            <p><span class="subhead">Email:</span> info@yourdomain.com</p>
+        </div>
+
+        <div class="footer-column">
+            <h3 class="footer-heading">Subscribe</h3>
+            <p>Sign up for our newsletter</p>
+            <div class="subscribe-box">
+                <input type="email" placeholder="Your email..." />
+                <button>&#10148;</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("emailForm").addEventListener("submit", function(event) {
+            const input = document.getElementById("emailInput").value.trim();
+            const message = document.getElementById("message");
+
+            if (input !== "" && !input.includes("@")) {
+                event.preventDefault(); // Stop page reload
+                message.textContent = "Please include '@' in the email address.";
+            }
+            else {
+                message.textContent = "";
+                         }
+        });	
+    </script>
+
+    <div class="footer-bottom">
+        <p>Copyright © 2025 All rights reserved | This template is made with <span style="color: red;">❤</span> by Colorlib</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
