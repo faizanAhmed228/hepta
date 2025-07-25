@@ -224,10 +224,28 @@
     padding: 150px;
     gap: 40px;
 }
-.sixteen{
+.sixteen {
     display: inline-block;
     padding-left: 20px;
 }
+
+/* Tablet screens (768px - 1024px) */
+@media (max-width: 1024px) {
+    .sixteen {
+        padding-left: 10px; /* kam padding for tablets */
+        display: block; /* better layout on tablet */
+    }
+}
+
+/* Mobile screens (up to 767px) */
+@media (max-width: 767px) {
+    .sixteen {
+        padding-left: 5px; /* minimal padding for mobile */
+        display: block; /* one below the other for small screens */
+        text-align: center; /* center align for better look */
+    }
+}
+
 .menu-icon{
     font-size: 30px;
     cursor: pointer;

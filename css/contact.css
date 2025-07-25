@@ -340,6 +340,7 @@
 }
 
 
+
 #twentyone {
     font-size: 70px;
     font-family: Times, serif;
@@ -349,6 +350,22 @@
     transform: translateY(50px);
     animation: slideUp 0.8s ease-out forwards;
 }
+
+/* Tablet screens (768px - 1024px) */
+@media (max-width: 1024px) {
+    #twentyone {
+        font-size: 50px; /* thoda chhota tablet ke liye */
+    }
+}
+
+/* Mobile screens (up to 767px) */
+@media (max-width: 767px) {
+    #twentyone {
+        font-size: 32px; /* mobile ke liye aur chhota */
+        margin: 0 0 20px; /* kam spacing */
+    }
+}
+
 
 .CustomerText {
     font-size: 20px;
@@ -362,6 +379,28 @@
     animation: slideUp 0.8s ease-out forwards;
     animation-delay: 0.3s;
 }
+
+/* Tablet screens (768px - 1024px) */
+@media (max-width: 1024px) {
+    .CustomerText {
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center; /* tablet pe center karna better lagta hai */
+        display: block;
+    }
+}
+
+/* Mobile screens (up to 767px) */
+@media (max-width: 767px) {
+    .CustomerText {
+        font-size: 16px;
+        line-height: 24px;
+        margin: 0 0 12px;
+        text-align: center;
+        display: block;
+    }
+}
+
 
 #twentytwo {
     margin: 0 27px;
@@ -399,7 +438,7 @@
         gap: 15px;
         padding-left: 0;
         margin-top: 10px;
-        font-size: 20px;
+        font-size: 10px;
     }
 }
 
