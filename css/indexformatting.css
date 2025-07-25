@@ -226,6 +226,7 @@
 }
 .sixteen{
     display: inline-block;
+    padding-left: 20px;
 }
 .menu-icon{
     font-size: 30px;
