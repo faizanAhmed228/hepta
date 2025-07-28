@@ -151,71 +151,72 @@
     display: block;
     margin: 0 auto 10px;
 }
-.sixteen {
-    margin-left: 50px;
-    margin-bottom: 50px;
-    display: inline-block;
-    opacity: 0;
-    transform: translateY(100px);
-    transition: all 0.8s ease-out;
+
+.sixteen-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.sixteen.show {
-    opacity: 1;
-    transform: translateY(0);
+.sixteen {
+    flex: 1 1 calc(33.333% - 20px); /* 3 items per row with gap */
+    max-width: calc(33.333% - 20px);
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.center-img {
+    height: 70px;
+    display: block;
+    margin: 0 auto 10px;
 }
 
 .headings {
-    font-size: 28px;
+    font-size: 24px;
     font-family: Times, serif;
-    margin: 0 0 8px;
+    margin: 0 0 10px;
     text-align: center;
+    color: #000;
 }
 
 .text {
-    margin: 0 0 16px;
+    margin: 0;
     color: #6c757d;
-    font-size: 18px;
+    font-size: 16px;
     font-family: Arial, sans-serif;
-    line-height: 30px;
+    line-height: 26px;
     text-align: center;
+    white-space: pre-wrap;
 }
 
-/* Tablet screens */
-@media (max-width: 1024px) {
+/* ✅ Responsive for Tablets */
+@media (max-width: 992px) {
     .sixteen {
-        margin-left: 0; /* center on tablets */
-        display: block;
-        text-align: center;
-    }
-
-    .headings {
-        font-size: 22px;
-    }
-
-    .text {
-        font-size: 16px;
-        line-height: 28px;
-        padding: 0 15px; /* prevent text from touching edges */
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
     }
 }
 
-/* Mobile screens */
+/* ✅ Responsive for Mobiles */
 @media (max-width: 600px) {
+    .sixteen-container {
+        padding: 10px;
+    }
+
     .sixteen {
-        margin-left: 0;
-        margin-bottom: 30px;
-        display: block;
-        text-align: center;
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 
-    .headings {
-        font-size: 18px;
-    }
-
-    .text {
-        font-size: 14px;
-        line-height: 24px;
+    .text, .headings {
         padding: 0 10px;
     }
 }
@@ -639,43 +640,63 @@
     color: #00bfa5;
 }
 
+/* Main container layout */
+.ratings-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+  background-color: #f9f9f9;
+}
+
+/* Single box */
 .ratingsadjust {
-    display: inline-block;
-    margin-left: 90px;
-    padding-bottom: 50px;
-    text-align: center;
-    background-color: white;
+  background-color: white;
+  text-align: center;
+  width: 30%;           /* 3 per row on large screens */
+  min-width: 260px;     /* Prevent shrinking too much */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* Tablet screens */
+/* Heading text */
+.headingadjust {
+  font-size: 26px;
+  font-family: Times, serif;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.headingadjust:hover {
+  color: #00bfa5;
+}
+
+/* Tablets */
 @media (max-width: 1024px) {
-    .headingadjust {
-        font-size: 22px;
-        text-align: center; /* center text on tablets */
-    }
+  .ratingsadjust {
+    width: 45%; /* 2 items per row on tablets */
+  }
 
-    .ratingsadjust {
-        margin-left: 0;              /* remove fixed margin */
-        display: block;              /* easier to center */
-        margin: 0 auto 40px auto;    /* center horizontally */
-        width: 80%;                  /* adjust width */
-        padding-bottom: 40px;
-    }
+  .headingadjust {
+    font-size: 22px;
+  }
 }
 
-/* Mobile screens */
+/* Phones */
 @media (max-width: 600px) {
-    .headingadjust {
-        font-size: 18px;
-        text-align: center; /* center text on phones */
-    }
+  .ratingsadjust {
+    width: 90%; /* stack vertically */
+  }
 
-    .ratingsadjust {
-        width: 90%;                  /* fill most of the screen */
-        margin: 0 auto 30px auto;    /* keep centered */
-        padding-bottom: 30px;
-    }
+  .headingadjust {
+    font-size: 18px;
+  }
 }
+
 .twentysix {
   flex: 1 1 220px;
   min-width: 220px;

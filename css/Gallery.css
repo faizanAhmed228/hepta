@@ -299,9 +299,9 @@
 
 .solve {
     display: flex;
-    height: 150px; /* added px */
-    width: 200%;
-    gap: 10%;
+    height: 300px; /* added px */
+    width: 420%;
+    gap: 2%;
 }
 
 .gallery2 {
